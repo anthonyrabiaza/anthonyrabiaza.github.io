@@ -10,5 +10,7 @@ Today, I am realizing my passion  as a Software/System Architect designing and i
 
 My day to day job is to make sure that my  customer’s projects are successful, fulfilling business needs in terms  of solutions & services and delivering tangible outcomes. I created this blog based on the experience that I acquired in Integration, API Management, Application Performance Management & Monitoring.
 
-You can find more information about on [linkedin](https://www.linkedin.com/in/anthonyrabiaza/)
+You can find more information about me on [linkedin](https://www.linkedin.com/in/anthonyrabiaza/) account.
+
+Thank you!
 
