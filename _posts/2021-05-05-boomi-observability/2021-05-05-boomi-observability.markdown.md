@@ -138,6 +138,8 @@ The [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) will allow
 
 ![Datadog Pyramid](/assets/2021-05-05-boomi-observability/boomi-observability-datadog.png)
 
+![Datadog Pyramid](/assets/2021-05-05-boomi-observability/use-case-datadog.png)
+
 ### View of Logs
 
 ![Logs](/assets/2021-05-05-boomi-observability/datadog2.png)
