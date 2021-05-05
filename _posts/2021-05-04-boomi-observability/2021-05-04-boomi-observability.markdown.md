@@ -33,11 +33,11 @@ There will be a lot more scenarios but having a **Observable** system would help
 2.  All Applications metrics, traces, logs and events are _correlated_ and linked with the previous data
 3.  Dashboards and Alerts and based on _all_ the Infrastructure and Application data
 
-![Observability Pyramid](/assets/2021-05-05-boomi-observability/boomi-observability.png)  
+![Observability Pyramid](/assets/boomi-observability/boomi-observability.png)  
 
 The **Deployment diagram** will the different elements will be the following:  
 
-![Use case](/assets/2021-05-05-boomi-observability/use-case.png)  
+![Use case](/assets/boomi-observability/use-case.png)  
 
 
 **Overview of Components**
@@ -57,16 +57,16 @@ Overview of the Boomi Processes
 
 ### API: First Process with Sub-Process
 
-![1st Process](/assets/2021-05-05-boomi-observability/boomi-process-1.png)   
-           ![(Sub) Process](/assets/2021-05-05-boomi-observability/boomi-process-1-sub.png)
+![1st Process](/assets/boomi-observability/boomi-process-1.png)   
+           ![(Sub) Process](/assets/boomi-observability/boomi-process-1-sub.png)
 
 ### JMS Listener: Second Process
 
-![JMS Process](/assets/2021-05-05-boomi-observability/boomi-process-2.png)
+![JMS Process](/assets/boomi-observability/boomi-process-2.png)
 
 ### Batch Process: executed on a schedule base
 
-![Batch Process](/assets/2021-05-05-boomi-observability/boomi-process-3.png)
+![Batch Process](/assets/boomi-observability/boomi-process-3.png)
 
 Implementation with a Monitoring Platform for Observability with Datadog
 ===========================================================
@@ -79,7 +79,7 @@ The first step consist of install the Datadog Agent on each server. This step wi
 
 The Log configuration will follow and will consist of several sub-steps, the first one will consist on the configuration of the Pipeline for each type of logs: in our Deployment, we have 6 types of logs for Boomi.  
 
-![Log Configuration](/assets/2021-05-05-boomi-observability/datadog1.png)  
+![Log Configuration](/assets/boomi-observability/datadog1.png)  
 
 The second sub-steps will consists for the creation of yaml file on each server to instruct the Datadog agent to scrap a log file.  
 One example of a Boomi Molecule (the first node /etc/datadog-agent/conf.d/boomi.d/conf.yaml):  
@@ -106,7 +106,7 @@ logs:
 
 The Datadog Java Agent (Jar) needs to be deployed on each node or deployed on the Shared Server accessible by all node, once this is done Boomi System properties needs to be updated via Boomi AtomSphere:  
 
-![Boomi AtomSphere](/assets/2021-05-05-boomi-observability/boomi-config-datadog.png)
+![Boomi AtomSphere](/assets/boomi-observability/boomi-config-datadog.png)
 
 ### APM Configuration: Tracing, Custom Events and Custom Metrics
 
@@ -121,7 +121,7 @@ The Boomi Scheduled processes will also be detected by Datadog due to the config
 
 The updated process will looks like the following:  
 
-![APM Instrumented](/assets/2021-05-05-boomi-observability/boomi-process-1-apm.png)  
+![APM Instrumented](/assets/boomi-observability/boomi-process-1-apm.png)  
 The changes includes:
 
 1.  The APM Start shape at the beginning
@@ -136,19 +136,19 @@ The [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) will allow
 
 ## Review of the Observability with Datadog
 
-![Datadog Pyramid](/assets/2021-05-05-boomi-observability/boomi-observability-datadog.png)
+![Datadog Pyramid](/assets/boomi-observability/boomi-observability-datadog.png)
 
-![Datadog Pyramid](/assets/2021-05-05-boomi-observability/use-case-datadog.png)
+![Datadog Pyramid](/assets/boomi-observability/use-case-datadog.png)
 
 ### View of Logs
 
-![Logs](/assets/2021-05-05-boomi-observability/datadog2.png)
+![Logs](/assets/boomi-observability/datadog2.png)
 
 ### View of Traces
 
 #### Overview
 
-![Traces](/assets/2021-05-05-boomi-observability/datadog3.png)
+![Traces](/assets/boomi-observability/datadog3.png)
 
 ####   Details of API Call from Browser to all back-end systems
 We have an end-to-end view of the API Call:
@@ -157,19 +157,19 @@ We have an end-to-end view of the API Call:
 *   API Call received by the first Boomi process, all the Connectors call involved in the first Boomi process and its SubProcess
 *   the second Boomi process with a JMS Listener and the Connector involved.
 
-![API Call](/assets/2021-05-05-boomi-observability/datadog4.png)
+![API Call](/assets/boomi-observability/datadog4.png)
 
 #### Detail of Scheduled Processes
 
 Note the name of the operation which the name of the Boomi Process (in AtomSphere) and the presence of Boomi metadata (boomi executionId, processId and processName) automatically added by the Boomi APM Connector.  
-![Batch](/assets/2021-05-05-boomi-observability/datadog5.png)
+![Batch](/assets/boomi-observability/datadog5.png)
 
 #### View of Events
 
-![Event overview](/assets/2021-05-05-boomi-observability/datadog6.png)  
+![Event overview](/assets/boomi-observability/datadog6.png)  
 
 Let's zoom on an event generated by Boomi APM Connector:  
-![Event details](/assets/2021-05-05-boomi-observability/boomi-execution-datadog.png)  We can see:
+![Event details](/assets/boomi-observability/boomi-execution-datadog.png)  We can see:
 
 *   the high-level details about the event: name of the process, application, environment, host, etc
 *   the details of the execution: Boomi executionId, traceId
@@ -179,17 +179,17 @@ Let's zoom on an event generated by Boomi APM Connector:
     3.  See Logs
 
 The **first** link will lead us the **Tracing** so we can see which steps of the Boomi process failed:  
-![Details: trace](/assets/2021-05-05-boomi-observability/datadog7.png)  
+![Details: trace](/assets/boomi-observability/datadog7.png)  
 The second link will lead us to Boomi AtomSphere **execution** so we can see all the details and other metadaaa from Boomi:  
-![Boomi execution](/assets/2021-05-05-boomi-observability/boomi-execution.png)  
+![Boomi execution](/assets/boomi-observability/boomi-execution.png)  
 
 The third link will lead us to the **logs** linked to the environment:  
-![Logs](/assets/2021-05-05-boomi-observability/datadog8.png)
+![Logs](/assets/boomi-observability/datadog8.png)
 
 #### View of Metrics (Custom Metrics collected by Boomi)
 
 This metrics is computed in a Boomi Process which send the data to Datadog using Boomi APM Connector.  
-![Metrics](/assets/2021-05-05-boomi-observability/datadog9.png)  
+![Metrics](/assets/boomi-observability/datadog9.png)  
 
 And finally, we can create some **monitor**, **synthetics** to receive alerts and **dashboards**:  
-![Dashboard](/assets/2021-05-05-boomi-observability/datadog10.png)
+![Dashboard](/assets/boomi-observability/datadog10.png)
