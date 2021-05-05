@@ -36,7 +36,31 @@ The AppDynamics Java Agent (Jar) needs to be deployed on each node or deployed o
 
 All the other configuration like controller-host, controller-port, account-name and account-key should remain in the controller-info.xml
 
-### APM Configuration: Tracing, Custom Data Collector
+Example of controller-info.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<controller-info>
+...  
+    <controller-host>bear2021XYZXYZ.saas.appdynamics.com</controller-host>
+    <controller-port>443</controller-port>
+    <controller-ssl-enabled>true</controller-ssl-enabled>
+    <use-simple-hostname>false</use-simple-hostname>
+    <application-name></application-name>
+    <tier-name></tier-name>
+    <node-name></node-name>
+...
+    <!-- Location of the Machine Agent which can be installed on each node-->
+    <agent-runtime-dir>/opt/appdynamics/machine-agent</agent-runtime-dir>
+
+    <enable-orchestration>false</enable-orchestration>
+...
+    <account-name>bear2021XYZXYZ</account-name>
+    <account-access-key>abcdefghijkl</account-access-key>
+...
+</controller-info>
+```
+
+### APM Configuration: Tracing and Custom Data Collector
 
 #### Boomi API Processes and Boomi JMS Processes
 
