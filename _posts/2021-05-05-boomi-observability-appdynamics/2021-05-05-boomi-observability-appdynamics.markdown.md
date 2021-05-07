@@ -22,7 +22,7 @@ The first step consist of install the AppDynamics Agent on each server. This ste
 
 ![Boomi AtomSphere](/assets/boomi-observability-appdynamics/transaction-detection-c.png)
 
-## Backup Detection
+## Backend Detection
 
 ![Boomi AtomSphere](/assets/boomi-observability-appdynamics/backend-detection-a.png)
 
