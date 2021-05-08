@@ -87,16 +87,16 @@ One example of a Boomi Molecule (on the first node, file location is /etc/datado
 ```
 logs:
   - type: file
-    path: /mnt/nfs/centos\_molecule/Boomi\_AtomSphere/Molecule/Molecule_centos_linux_cluster/logs/*.container.192_168_0_119.log
+    path: /mnt/nfs/centos_molecule/Boomi_AtomSphere/Molecule/Molecule_centos_linux_cluster/logs/*.container.192_168_0_119.log
     service: boomimolecule
     source: boomi-container
-    log\_processing\_rules:
+    log_processing_rules:
       - type: multi\_line
         name: boomi-container-startwithdate
         pattern: \\w{3}\\s+\\d{2},
     
   - type: file
-    path: /mnt/nfs/centos\_molecule/Boomi\_AtomSphere/Molecule/Molecule\_centos\_linux\_cluster/logs/*.shared_http_server.192_168_0_119.log
+    path: /mnt/nfs/centos_molecule/Boomi_AtomSphere/Molecule/Molecule_centos_linux_cluster/logs/*.shared_http_server.192_168_0_119.log
     service: boomimolecule
     source: boomi-sharedwebserver
     
