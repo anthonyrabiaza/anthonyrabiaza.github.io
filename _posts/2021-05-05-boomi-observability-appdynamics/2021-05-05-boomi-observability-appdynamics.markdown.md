@@ -34,7 +34,7 @@ The AppDynamics Java Agent (Jar) needs to be deployed on each node or deployed o
 
 ![Boomi AtomSphere](/assets/boomi-observability-appdynamics/boomi-config-appdynamics.png)
 
-All the other configuration like controller-host, controller-port, account-name and account-key should remain in the controller-info.xml
+All the other configuration elements like controller-host, controller-port, account-name and account-key should remain in the controller-info.xml
 
 Example of controller-info.xml
 ```
@@ -81,7 +81,7 @@ The operation name for instance /ws/rest/apm/test/MQ/ and the HTTP method will h
 
 The Boomi Scheduled processes will also be detected by AppDynamics due to the configuration in Boomi AtomSphere. 
 
-But the name of the process and other details wont be available, this an instrumentation of the process will be required. The use of [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) will minimize the changes:  
+But the name of the process and other details won't be available. An manual instrumentation of the process will be required to get this details: the use of [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) will minimize the changes:  
 
 Initial process:
 

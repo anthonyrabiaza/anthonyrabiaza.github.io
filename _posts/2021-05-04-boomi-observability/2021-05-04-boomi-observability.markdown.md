@@ -35,7 +35,7 @@ There will be a lot more scenarios but having a **Observable** system would help
 
 ![Observability Pyramid](/assets/boomi-observability/boomi-observability.png)  
 
-The **Deployment diagram** will the different elements will be the following:  
+The **Deployment diagram** with the different elements will be the following:  
 
 ![Use case](/assets/boomi-observability/use-case.png)  
 
@@ -81,13 +81,13 @@ The Log configuration will follow and will consist of several sub-steps, the fir
 
 ![Log Configuration](/assets/boomi-observability/datadog1.png)  
 
-The second sub-steps will consists for the creation of yaml file on each server to instruct the Datadog agent to scrap a log file.  
-One example of a Boomi Molecule (the first node /etc/datadog-agent/conf.d/boomi.d/conf.yaml):  
+The second sub-steps will consists of the creation of a yaml file on each server to instruct the Datadog agent to scrap a log file.  
+One example of a Boomi Molecule (on the first node, file location is /etc/datadog-agent/conf.d/boomi.d/conf.yaml):  
 
 ```
 logs:
   - type: file
-    path: /mnt/nfs/centos\_molecule/Boomi\_AtomSphere/Molecule/Molecule\_centos\_linux\_cluster/logs/\*.container.192\_168\_0\_119.log
+    path: /mnt/nfs/centos\_molecule/Boomi\_AtomSphere/Molecule/Molecule_centos_linux_cluster/logs/*.container.192_168_0_119.log
     service: boomimolecule
     source: boomi-container
     log\_processing\_rules:
@@ -96,7 +96,7 @@ logs:
         pattern: \\w{3}\\s+\\d{2},
     
   - type: file
-    path: /mnt/nfs/centos\_molecule/Boomi\_AtomSphere/Molecule/Molecule\_centos\_linux\_cluster/logs/\*.shared\_http\_server.192\_168\_0\_119.log
+    path: /mnt/nfs/centos\_molecule/Boomi\_AtomSphere/Molecule/Molecule\_centos\_linux\_cluster/logs/*.shared_http_server.192_168_0_119.log
     service: boomimolecule
     source: boomi-sharedwebserver
     
@@ -104,7 +104,7 @@ logs:
 
 ## APM Setup
 
-The Datadog Java Agent (Jar) needs to be deployed on each node or deployed on the Shared Server accessible by all node, once this is done Boomi System properties needs to be updated via Boomi AtomSphere:  
+The Datadog Java Agent (Jar) needs to be deployed on each node or deployed on the Shared Server accessible by all nodes, once this is done Boomi System properties needs to be updated via Boomi AtomSphere:  
 
 ![Boomi AtomSphere](/assets/boomi-observability/boomi-config-datadog.png)
 
@@ -113,11 +113,13 @@ The Datadog Java Agent (Jar) needs to be deployed on each node or deployed on th
 #### Boomi API Processes and Boomi JMS Processes
 
 In the context of Datadog, the Boomi API processes do not require any change, they will be automatically detected by Datadog and instrumentation will be required only to get advanced metadata (see next section).  
-The operation name for instance /ws/rest/apm/test/MQ/ and the HTTP method will help us identifying the API process.
+The operation name (for instance /ws/rest/apm/test/MQ/) and the HTTP method will help us to identify the API process executed.
 
 #### Boomi Scheduled Processes
 
-The Boomi Scheduled processes will also be detected by Datadog due to the configuration in Boomi AtomSphere. But the name of the process and other details wont be avaiable, this an instrumentation of the process will be required. The use of [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) will minimize the changes:  
+The Boomi Scheduled processes will also be detected by Datadog due to the configuration in Boomi AtomSphere. 
+
+But the name of the process and other details won't be available. An manual instrumentation of the process will be required to get this details: the use of [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) will minimize the changes:  
 
 The updated process will looks like the following:  
 
@@ -161,7 +163,7 @@ We have an end-to-end view of the API Call:
 
 #### Detail of Scheduled Processes
 
-Note the name of the operation which the name of the Boomi Process (in AtomSphere) and the presence of Boomi metadata (boomi executionId, processId and processName) automatically added by the Boomi APM Connector.  
+Please note the presence of the name of the operation which the name of the Boomi Process (in AtomSphere) and the presence of Boomi metadata (boomi executionId, processId and processName) automatically added by the Boomi APM Connector.  
 ![Batch](/assets/boomi-observability/datadog5.png)
 
 #### View of Events
