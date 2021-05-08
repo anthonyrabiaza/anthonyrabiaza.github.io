@@ -73,7 +73,7 @@ Implementation with a Monitoring Platform for Observability with Datadog
 
 ## Agent Installation
 
-The first step consist of install the Datadog Agent on each server. This step will link the server (or Cloud resource) to Datadog and will allows the gathering of metrics, status of server, processes, network, etc.
+The first step consists of installing the Datadog Agent on each server. This step will link the server (or Cloud resource) to Datadog and will allows the gathering of metrics, status of server, processes, network, etc.
 
 ## Log Configuration
 
