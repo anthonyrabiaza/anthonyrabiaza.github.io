@@ -5,14 +5,17 @@ permalink: /boomi-observability-appdynamics/
 ---
 Implementation with a Monitoring Platform for Observability with AppDynamics
 ===========================================================
+## Overview
+
+![Boomi AtomSphere](/assets/boomi-observability-appdynamics/appdynamics.png)
 
 ## Machine Agent Installation
 
-The first step consist of install the AppDynamics Agent on each server. This step will link the server (or Cloud resource) to AppDynamics and will allows the gathering of metrics, status of server, processes, network, etc.
+The first step consist of installing the AppDynamics Agent on each server. This step will link the server (or Cloud resource) to AppDynamics and will allows the gathering of metrics, status of server, processes, network, etc.
 
 ## Java Agent Installation
 
-The first step consist of install the AppDynamics Agent on each server. This step will link the server (or Cloud resource) to AppDynamics and will allows the gathering of metrics, status of server, processes, network, etc.
+The second step consist of installing the AppDynamics Java Agent on each Boomi runtime. This step will link the Java server to AppDynamics and will allows the gathering of JVM metrics and traces.
 
 ## Transaction Detection
 
@@ -124,7 +127,7 @@ Waterfall view:
 
 #### Detail of Scheduled Processes
 
-We have an end-to-end view of the API Call:
+We have an end-to-end view of the Process:
 
 ![Batch](/assets/boomi-observability-appdynamics/transaction-2-detail.png)
 
