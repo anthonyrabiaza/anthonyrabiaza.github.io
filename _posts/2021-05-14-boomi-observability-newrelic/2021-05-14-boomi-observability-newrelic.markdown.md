@@ -152,12 +152,12 @@ Boomi JMS ProcessI after changes:
 
 ![Traces](/assets/boomi-observability-newrelic/distributed-tracing-overview.png)
 
-#### Traces
+##### Traces
 
 ![Traces](/assets/boomi-observability-newrelic/traces.png)
 
-#### Detail of API and JMS Process Correlated
-We have an end-to-end view of the Process:
+##### Detail of API and JMS Processes Correlated
+We have an end-to-end view of the Processes:
 
 ![Transaction](/assets/boomi-observability-newrelic/apm-transaction-details.png)
 
