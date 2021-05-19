@@ -70,6 +70,14 @@ Create a filed called **extension-boomi.xml** in the **extensions** folder (from
 
 ### APM Configuration: Tracing and Custom Data Collector
 
+#### Boomi Custom Library
+
+1. For instrumentation, you need to download the API archive from New Relic: for instance newrelic-api-6.4.2.jar
+2. Upload the Jar to Boomi>Settings>Account Libraries
+   ![APM Instrumented](/assets/boomi-observability-newrelic/customlib-upload-jar.png)  
+3. Create a Custom Library and Deploy it to the Environment which will be monitored by New Relic
+   ![APM Instrumented](/assets/boomi-observability-newrelic/customlib-create.png)
+
 #### Boomi Scheduled Processes
 
 The Boomi Scheduled processes will be detected by New Relic APM but requires a manual instrumentation using [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm) to add the tracing metadata:  
