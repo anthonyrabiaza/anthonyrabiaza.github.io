@@ -22,7 +22,7 @@ title: Ant's Blog
 email: anthony.rabiaza at gmail dot com
 description: >- # this means to ignore newlines until "baseurl:"
   Tutorial and tools for Boomi, MuleSoft and other API Platforms.
-  APM and Observability documentation.
+  Documentation about APM, Observability and Cloud-native elements.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.antsoftware.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  anthonyrabiaza
