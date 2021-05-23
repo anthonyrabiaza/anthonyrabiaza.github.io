@@ -6,13 +6,13 @@ permalink: /about/
 
 I started software development at the age of 12 in my parents' living  room in Madagascar with the only help of a big stack of Computer Science books that my uncle gave me. 
 
-I studied Computer Science at the University of  Paris Sud - picture below taken during my Thesis presentation related to [XML Structuration (RDF) of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf) - the and Telecom ParisTech.
+I studied Computer Science at the University of  Paris Sud (picture below taken during my Thesis presentation related to [XML Structuration (i.e. using RDF) of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf)) and specialized in IT Architecture Design & Middleware at Telecom ParisTech.
 
 <img src="/assets/about/internship-presentation-2004.png" alt="internship-presentation-2004" style="zoom: 25%;" />
 
 Today, I am realizing my passion as a Software/System Architect designing and implementing Enterprise  Solutions using Application Programming Interface, Big Data Analytics,  Business Process Management, Complex Event Processing, Hybrid-Cloud  Integration, Master Data Management, Service-Oriented Architecture and  Process Automation. 
 
-My day to day job is to make sure that my  customer’s projects are successful, fulfilling business needs in terms  of solutions & services and delivering tangible outcomes. I created this blog based on the experience that I acquired in Integration, API Management, Application Performance Management & Monitoring.
+My day to day job is to make sure that my  customer’s projects are successful, fulfilling business needs in terms  of solutions & services and delivering tangible outcomes. I created this blog based on the experience that I acquired in Integration, API Management, Observability & Application Performance Management.
 
 You can find more information about me on my [linkedin](https://www.linkedin.com/in/anthonyrabiaza/) account.
 
