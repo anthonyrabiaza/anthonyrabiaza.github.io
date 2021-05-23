@@ -6,7 +6,7 @@ permalink: /about/
 
 I started software development at the age of 12 in my parents' living  room in Madagascar with the only help of a big stack of Computer Science books that my uncle gave me. 
 
-I studied Computer Science at the University of  Paris Sud - picture below taken during my Thesis presentation related to [XML Structuration (with Semantic Web/RDF) of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf) - the and Telecom ParisTech.
+I studied Computer Science at the University of  Paris Sud - picture below taken during my Thesis presentation related to [XML Structuration (RDF) of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf) - the and Telecom ParisTech.
 
 <img src="/assets/about/internship-presentation-2004.png" alt="internship-presentation-2004" style="zoom: 25%;" />
 
