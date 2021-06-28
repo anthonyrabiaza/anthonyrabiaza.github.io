@@ -8,7 +8,7 @@ I started software development at the age of 12 in my parents' living  room in M
 
 I studied Computer Science at the University of  Paris Sud (picture below taken during my Thesis presentation related to [XML Structuration (i.e. using RDF) of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf)) and specialized in IT Architecture Design & Middleware at Telecom ParisTech.
 
-<img src="/assets/about/internship-presentation-2004.png" alt="internship-presentation-2004" style="zoom: 25%;" />
+<img src="/assets/about/internship-presentation-2004.png" alt="internship-presentation-2004"/>
 
 Today, I am realizing my passion as a Software/System Architect designing and implementing Enterprise  Solutions using Application Programming Interface, Big Data Analytics,  Business Process Management, Complex Event Processing, Hybrid-Cloud  Integration, Master Data Management, Service-Oriented Architecture and  Process Automation. 
 
