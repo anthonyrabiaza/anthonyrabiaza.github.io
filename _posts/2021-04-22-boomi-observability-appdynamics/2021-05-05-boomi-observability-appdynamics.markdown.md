@@ -19,7 +19,7 @@ The second step consist of installing the AppDynamics Java Agent on each Boomi r
 
 ## Transaction Detection
 
-This part is optional and will allow to detect any process execution in Boomi. If you are using the Boomi APM Connector or only monitoring APIs and JMS Processes, you can skip this part.
+This part is **optional** and will allow the detection of all process executions in Boomi. If you are using the Boomi APM Connector or only monitoring APIs and JMS Processes, you can skip this part.
 
 ![Boomi AtomSphere](/assets/boomi-observability-appdynamics/transaction-detection-a.png)
 
