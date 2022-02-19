@@ -195,3 +195,15 @@ This metrics is computed in a Boomi Process which send the data to Datadog using
 
 And finally, we can create some **monitor**, **synthetics** to receive alerts and **dashboards**:  
 ![Dashboard](/assets/boomi-observability/datadog10.png)
+
+For more information about Observability with Boomi using other APM Platforms, please have a look at the other pages of this blog: 
+
+- [Root page with multiple articles](/)
+
+- [Observability with AppDynamics](/boomi-observability-appdynamics/)
+
+- [Observability with Elastic](/boomi-observability-elastic/)
+
+- [Observability with New Relic](/boomi-observability-newrelic/)
+
+- [Observability with Grafana Cloud](/boomi-observability-grafanacloud/)
