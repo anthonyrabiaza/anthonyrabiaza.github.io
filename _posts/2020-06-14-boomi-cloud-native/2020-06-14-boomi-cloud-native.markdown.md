@@ -32,13 +32,14 @@ Container Orchestration Platform summary
 
 The following table is trying to summarize some possibilities:
 
-| Container Orchestration Platform | Setup Method | References |
-| -- | -- | -- |
-| Docker-Swarm-like platform: <br> *   AWS EC2 Instances with Docker Swarm <br> *   AWS ECS <br> *   Azure VMs <br> *   Docker Swarm on VMs <br> *   Docker Swarm on Bare-metal | *   Using Docker command line if available <br> *   Using custom Task/Pod definition (for instance AWS ECS using JSON Task Definition)  | [Boomi Help](https://help.boomi.com/bundle/integration/page/int-Docker_Molecule_installation_checklist_Linux_fa5d6d80-5789-4cc3-925d-d927286ad558.html) |
-| Kubernetes (K8s) <br> *   AWS EKS <br> *   Azure AKS <br> *   K8s on VMs <br> *   K8s on Bare-metal | Using K8s yaml files with Boomi Docker images | [https://github.com/anthonyrabiaza/BoomiKubernetes](https://github.com/anthonyrabiaza/BoomiKubernetes) |
-| Pivotal Container Service / PKS | Using Boomi Data Services PKS from Pivotal | [https://github.com/anthonyrabiaza/BoomiPivotalContainerService](https://github.com/anthonyrabiaza/BoomiPivotalContainerService)  <br> [https://network.pivotal.io/products/boomi-data-services-pks/](https://network.pivotal.io/products/boomi-data-services-pks/) |
-| Pivotal PCF / VMWare Tanzu | Using Boomi Data Services from Pivotal | [https://network.pivotal.io/products/boomi-data-services/](https://network.pivotal.io/products/boomi-data-services/) |
-| OpenShift | Using K8s yaml files with custom Boomi Docker images | [https://github.com/anthonyrabiaza/BoomiOpenShift](https://github.com/anthonyrabiaza/BoomiOpenShift) |
+| Container Orchestration Platform                                                                                                                                              | Setup Method | References |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| -- | -- |
+| Docker-Swarm-like platform: <br> *   AWS EC2 Instances with Docker Swarm <br> *   Azure VMs <br> *   Docker Swarm on VMs <br> *   Docker Swarm on Bare-metal | *   Using Docker command line if available <br> *   Using custom Task/Pod definition | [Boomi Help](https://help.boomi.com/bundle/integration/page/int-Docker_Molecule_installation_checklist_Linux_fa5d6d80-5789-4cc3-925d-d927286ad558.html) |
+| AWS ECS (EC2 or Fargate)                                                                                                                                                      | *   Using AWS ECS using JSON Task Definition  | [https://github.com/anthonyrabiaza/BoomiAWSECS](https://github.com/anthonyrabiaza/BoomiAWSECS) |
+| Kubernetes (K8s) <br> *   AWS EKS <br> *   Azure AKS <br> *   K8s on VMs <br> *   K8s on Bare-metal                                                                           | Using K8s yaml files with Boomi Docker images | [https://github.com/anthonyrabiaza/BoomiKubernetes](https://github.com/anthonyrabiaza/BoomiKubernetes) |
+| Pivotal Container Service / PKS                                                                                                                                               | Using Boomi Data Services PKS from Pivotal | [https://github.com/anthonyrabiaza/BoomiPivotalContainerService](https://github.com/anthonyrabiaza/BoomiPivotalContainerService)  <br> [https://network.pivotal.io/products/boomi-data-services-pks/](https://network.pivotal.io/products/boomi-data-services-pks/) |
+| Pivotal PCF / VMWare Tanzu                                                                                                                                                    | Using Boomi Data Services from Pivotal | [https://network.pivotal.io/products/boomi-data-services/](https://network.pivotal.io/products/boomi-data-services/) |
+| OpenShift                                                                                                                                                                     | Using K8s yaml files with custom Boomi Docker images | [https://github.com/anthonyrabiaza/BoomiOpenShift](https://github.com/anthonyrabiaza/BoomiOpenShift) |
 
 
 Examples of Container Orchestration Platform deployments
