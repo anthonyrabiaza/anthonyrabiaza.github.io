@@ -19,7 +19,7 @@ The first step consist of installing the CloudWatch elements on each server:
 - AWS Distro for OpenTelemetry Collector for CloudWatch (see [installation steps](https://docs.aws.amazon.com/eks/latest/userguide/configure-cw.html){:target="_blank"} with a [sample configuration](https://github.com/anthonyrabiaza/opentelemetry-log-parser#configure-opentelemetry-collector){:target="_blank"})
 - Prometheus Exporter (see [installation steps](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-PrometheusEC2.html#CloudWatch-Agent-Prometheus-Java){:target="_blank"})
 
-This step will link the server to CloudWatch Cloud and will allows the gathering of logs, metrics, status of server, processes, network, etc.
+This step will link the server to CloudWatch and will allows the gathering of logs, metrics, status of server, processes, network, etc.
 
 ## Java Agent Installation
 
@@ -27,7 +27,7 @@ The second step consist of installing the Java Agent on each Boomi runtime. This
 
 ## APM Setup
 
-The CloudWatch Cloud Java Agent (Jar) needs to be deployed on each node or deployed on the Shared Server accessible by all nodes. Once this is done, Boomi System properties needs to be updated via Boomi AtomSphere:  
+The X-Ray Java Agent (Jar) needs to be deployed on each node or deployed on the Shared Server accessible by all nodes. Once this is done, Boomi System properties needs to be updated via Boomi AtomSphere:  
 
 ![Boomi AtomSphere](/assets/boomi-observability-aws-cloudwatch-xray/boomi-config-cloudwatch.png)
 
@@ -35,7 +35,7 @@ The CloudWatch Cloud Java Agent (Jar) needs to be deployed on each node or deplo
 
 #### Boomi Scheduled Processes
 
-The Boomi Scheduled processes will be detected by CloudWatch Cloud APM but requires a manual instrumentation using [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"} to add the tracing metadata:  
+The Boomi Scheduled processes will not be detected by X-Ray and requires a manual instrumentation using [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"} to add the tracing metadata:  
 
 Initial process:
 
@@ -54,12 +54,12 @@ The changes includes:
 The [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"} will allow the Instrumentation of any Boomi Processes and will provide:
 
 1.  Tracing: 3 steps: Start, Stop or Error
-2.  Eventing, in Stop or Error steps and event can be sent to CloudWatch Cloud to inform of the success or failure of the process (including all details: server, time, environment, execution context...)
-3.  Custom Metrics: a Boomi Process can send metrics related to business data or systems to CloudWatch Cloud
+2.  Eventing, in Stop or Error steps and event can be sent to X-Ray to inform of the success or failure of the process (including all details: server, time, environment, execution context...)
+3.  Custom Metrics: a Boomi Process can send metrics related to business data or systems to CloudWatch
 
 #### Boomi API Processes
 
-In the context of CloudWatch Cloud, the Boomi API processes also require manual instrumentation using the [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"}. 
+In the context of X-Ray, the Boomi API processes also require manual instrumentation using the [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"}. 
 
 Boomi API before changes:
 
@@ -83,7 +83,7 @@ The Operation will use the the HTTP W3C Headers send by the API Consumer to corr
 
 #### Boomi JMS Processes
 
-In the context of CloudWatch Cloud, the Boomi API processes require a similar manual instrumentation as the API Process. You can also use the same APM Operation as they are working in the context of API and JMS Processes.
+In the context of X-Ray, the Boomi API processes require a similar manual instrumentation as the API Process. You can also use the same APM Operation as they are working in the context of API and JMS Processes.
 
 Boomi JMS Process before changes:
 
@@ -93,7 +93,7 @@ Boomi JMS Process after changes:
 
 ![APM Instrumented](/assets/boomi-observability-aws-cloudwatch-xray/boomi-process-3-apm.png)  
 
-## Review of the Observability with CloudWatch Cloud
+## Review of the Observability with CloudWatch and X-Ray
 
 ### CloudWatch X-Ray Traces overview
 
