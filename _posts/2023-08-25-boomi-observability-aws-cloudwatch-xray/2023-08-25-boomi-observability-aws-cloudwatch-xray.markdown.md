@@ -14,10 +14,10 @@ Implementation with a Monitoring Platform for Observability with AWS CloudWatch 
 
 The first step consist of installing the CloudWatch elements on each server:
 
-- CloudWatch Agent (see [installation steps](https://CloudWatch.com/docs/CloudWatch-cloud/agent/){:target="_blank"}
+- CloudWatch Agent (see [installation steps](https://CloudWatch.com/docs/CloudWatch-cloud/agent/){:target="_blank"})
 - Fluent-D with CloudWatch plugin (see [installation steps](https://github.com/fluent-plugins-nursery/fluent-plugin-cloudwatch-logs){:target="_blank"} and [sample configuration](https://github.com/anthonyrabiaza/opentelemetry-log-parser#promtail-configuration){:target="_blank"})
 - AWS Distro for OpenTelemetry Collector for CloudWatch (see [installation steps](https://docs.aws.amazon.com/eks/latest/userguide/configure-cw.html){:target="_blank"} with a [sample configuration](https://github.com/anthonyrabiaza/opentelemetry-log-parser#configure-opentelemetry-collector){:target="_blank"})
-- Prometheus Exporter (see [installation steps](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-PrometheusEC2.html#CloudWatch-Agent-Prometheus-Java){:target="_blank"}
+- Prometheus Exporter (see [installation steps](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-PrometheusEC2.html#CloudWatch-Agent-Prometheus-Java){:target="_blank"})
 
 This step will link the server to CloudWatch Cloud and will allows the gathering of logs, metrics, status of server, processes, network, etc.
 
