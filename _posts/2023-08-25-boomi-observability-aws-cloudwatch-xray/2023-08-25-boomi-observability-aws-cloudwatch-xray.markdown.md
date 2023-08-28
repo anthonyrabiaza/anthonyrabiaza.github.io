@@ -116,8 +116,18 @@ You can now scroll down to the Logs associated to this trace (traces and logs ne
 
 To view more details on the logs, click on "View on CloudWatch Logs Insights"
 
-![Dependencies](/assets/boomi-observability-aws-cloudwatch-xray/cloudwatch-logs-screen.png)
+![Logs](/assets/boomi-observability-aws-cloudwatch-xray/cloudwatch-logs-screen.png)
 
 Click on "Run query"
 
-![Dependencies](/assets/boomi-observability-aws-cloudwatch-xray/cloudwatch-logs-only.png)
+![Logs](/assets/boomi-observability-aws-cloudwatch-xray/cloudwatch-logs-only.png)
+
+### View of Metrics
+
+#### View of raw metrics from Prometheus
+
+![Metrics](/assets/boomi-observability-aws-cloudwatch-xray/cloudwatch-metrics.png)
+
+#### View of a custom dashboard with various metrics (and logs)
+
+![Dashboard](/assets/boomi-observability-aws-cloudwatch-xray/cloudwatch-dashboard.png)
