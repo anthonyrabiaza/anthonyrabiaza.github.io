@@ -55,7 +55,6 @@ The [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_
 
 1.  Tracing: 3 steps: Start, Stop or Error
 2.  Eventing, in Stop or Error steps and event can be sent to X-Ray to inform of the success or failure of the process (including all details: server, time, environment, execution context...)
-3.  Custom Metrics: a Boomi Process can send metrics related to business data or systems to CloudWatch
 
 #### Boomi API Processes
 
