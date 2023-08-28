@@ -51,11 +51,7 @@ The changes includes:
 2.  The APM Stop shape before the last End, please note that we created a branch here as the Disk shape (Get) might not returned a Document thus an APM Stop shape after the Disk might not be called
 3.  The APM Error in the try catch
 
-The [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"} will allow the Instrumentation of any Boomi Processes and will provide:
-
-1.  Tracing: 3 steps: Start, Stop or Error
-2.  Eventing, in Stop or Error steps and event can be sent to Grafana Cloud to inform of the success or failure of the process (including all details: server, time, environment, execution context...)
-3.  Custom Metrics: a Boomi Process can send metrics related to business data or systems to Grafana Cloud
+The [Boomi APM Connector](https://github.com/anthonyrabiaza/boomiapm){:target="_blank"} will allow the Instrumentation of any Boomi Processes and will provide with 3 steps: Start, Stop or Error
 
 #### Boomi API Processes
 
