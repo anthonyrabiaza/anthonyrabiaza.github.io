@@ -10,7 +10,7 @@ I studied Computer Science at the University of Paris Sud (picture below taken d
 
 <img src="/assets/about/internship-presentation-2004.png" alt="internship-presentation-2004"/>
 
-Today, I am realizing my passion as a Software/System Architect designing and implementing Enterprise  Solutions using Application Programming Interface, Big Data Analytics,  Business Process Management, Complex Event Processing, Hybrid-Cloud  Integration, Master Data Management, Service-Oriented Architecture and  Process Automation. 
+Today, I am realizing my passion as a Managing Architect designing and implementing Enterprise  Solutions using Application Programming Interface, Big Data Analytics,  Business Process Management, Complex Event Processing, Hybrid-Cloud  Integration, Master Data Management, Service-Oriented Architecture and  Process Automation. 
 
 My day to day job is to make sure that my  customer’s projects are successful, fulfilling business needs in terms  of solutions & services and delivering tangible outcomes. I created this blog based on the experience that I acquired in Integration, API Management, Observability & Application Performance Management.
 
