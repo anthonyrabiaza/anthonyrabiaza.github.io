@@ -6,7 +6,7 @@ permalink: /about/
 
 I started software development at the age of 10 in my parents' living  room in Madagascar with the only help of a big stack of Computer Science books that my uncle gave me. 
 
-I studied Computer Science at the University of Paris Saclay/Orsay (picture below taken during my Thesis presentation related to [XML Structuration using RDF of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf)) and specialized in IT Architecture Design & Middleware at Télécom Paris (where I released another Thesis about the [Usage of Interactive Avatar for CRM on the Web](/assets/about/Post-Master-CRMusingInteractiveAvatar.pdf)).
+I studied Computer Science at the University of Paris-Saclay/Orsay (picture below taken during my Thesis presentation related to [XML Structuration using RDF of Complex Data for DataMining](/assets/about/Master-Thesis-in-Resource-Description-Framework.pdf)) and specialized in IT Architecture Design & Middleware at Télécom Paris (where I released another Thesis about the [Usage of Interactive Avatar for CRM on the Web](/assets/about/Post-Master-CRMusingInteractiveAvatar.pdf)).
 
 <img src="/assets/about/internship-presentation-2004.png" alt="internship-presentation-2004"/>
 
