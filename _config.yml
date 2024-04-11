@@ -31,7 +31,7 @@ google_analytics: G-PZPR4PX4Z2
 #twitter_username: jekyllrb
 
 # Build settings
-theme: minima
+#theme: minima
 remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
