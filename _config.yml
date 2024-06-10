@@ -51,7 +51,7 @@ plugins:
 #   - .jekyll-cache/
 #   - gemfiles/
 #   - Gemfile
-#   - Gemfile.lock
+#   - Gemfile.lock.old0-linux
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
