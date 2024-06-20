@@ -3,7 +3,7 @@ layout: post
 title:  "Advanced Security on Boomi using the Data Security Processor"
 permalink: /boomi-advanced-security/
 ---
-Using Boomi Security Data Processor
+Using [Boomi Security Data Processor](https://github.com/anthonyrabiaza/boomisecuritydataprocessor)
 
 I wanted to share a solution I developed to simplify Secured Operations around Symmetric and Asymmetric Cryptography and Digital Signature using Public Key Infrastructure with the Dell Boomi AtomSphere Platform.
 Dell Boomi Integration included out of the box Web of Trust functionality with PGP (Pretty Good Privacy) and this extension is adding:
@@ -244,3 +244,6 @@ Example of process reading values in JSON and writing to a DB
 Output in the DB , **please make sure that the size of the column is wide enough** (in our example a field of 16 chars + salt of 8 chars is converted to a string of 344 chars)
 
 ![Alt text](/assets/boomi-advanced-security/boomi_process_encrypting_field_db.png?raw=true "BoomiSecurityDataProcessor")
+
+# Access to the source code
+Go the source code and in the target folder to get the latest version of the Connector: https://github.com/anthonyrabiaza/boomisecuritydataprocessor
