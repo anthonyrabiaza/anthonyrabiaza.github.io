@@ -246,4 +246,4 @@ Output in the DB , **please make sure that the size of the column is wide enough
 ![Alt text](/assets/boomi-advanced-security/boomi_process_encrypting_field_db.png?raw=true "BoomiSecurityDataProcessor")
 
 # Access to the source code
-Go the source code and in the target folder to get the latest version of the Connector: https://github.com/anthonyrabiaza/boomisecuritydataprocessor
+Go to GitHub to get the latest version of the [zip](https://github.com/anthonyrabiaza/boomisecuritydataprocessor/tree/master/target) and the XML [descriptor](https://github.com/anthonyrabiaza/boomisecuritydataprocessor/tree/master/target/classes)
