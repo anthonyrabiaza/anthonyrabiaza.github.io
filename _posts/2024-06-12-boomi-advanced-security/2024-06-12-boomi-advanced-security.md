@@ -23,6 +23,7 @@ The Boomi Security Processor will accelerate the Cryptographic operations and wi
   ![Alt text](/assets/boomi-advanced-security/signing.png?raw=true "BoomiSecurityDataProcessor")
 
 - Encrypting (Dell Boomi is the Sender on the following diagram) OR Decrypting  (Dell Boomi is the Receiver on the following diagram)
+
   ![Alt text](/assets/boomi-advanced-security/encrypting.png?raw=true "BoomiSecurityDataProcessor")
 
 ## Exhaustive list of pre-configured Actions, Standards and Algorithms
