@@ -37,7 +37,7 @@ permalink: /certifications/
 <div class="cert-dashboard">
 
 <div class="cert-stats">
-  <div><div class="stat-value">68</div><div class="stat-label">Total certifications</div></div>
+  <div><div class="stat-value">67</div><div class="stat-label">Total certifications</div></div>
   <div><div class="stat-value">9</div><div class="stat-label">Domains</div></div>
   <div><div class="stat-value">13</div><div class="stat-label">Largest domain</div></div>
   <div><div class="stat-value">20+</div><div class="stat-label">Years experience</div></div>
@@ -143,7 +143,6 @@ permalink: /certifications/
         "Dataiku ML Practitioner",
         "Oracle Cloud Infrastructure AI Foundations Associate",
         "Oracle Cloud Infrastructure Generative AI Professional",
-        "Google Cloud Generative AI Leader"
       ]
     },
     {
