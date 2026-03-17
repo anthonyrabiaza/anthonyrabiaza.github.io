@@ -7,7 +7,7 @@ permalink: /certifications/
 <style>
 .cert-dashboard { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
 .cert-stats { display: flex; justify-content: space-around; text-align: center; margin: 1.5rem 0 2rem; flex-wrap: wrap; gap: 1rem; }
-.cert-stats .stat-value { font-size: 2rem; font-weight: 700; color: #7c6ef0; }
+.cert-stats .stat-value { font-size: 2rem; font-weight: 700; color: #000; }
 .cert-stats .stat-label { font-size: 0.85rem; opacity: 0.7; margin-top: 0.2rem; }
 .cert-chart { margin: 1.5rem 0 2rem; }
 .chart-row { display: flex; align-items: center; margin-bottom: 0.6rem; gap: 0.75rem; }
@@ -17,8 +17,8 @@ permalink: /certifications/
 .chart-count { min-width: 28px; text-align: right; font-size: 0.85rem; font-weight: 600; }
 .cert-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; padding: 1rem 0; border-top: 1px solid rgba(128,128,128,0.2); border-bottom: 1px solid rgba(128,128,128,0.2); }
 .cert-filter-btn { padding: 0.4rem 0.9rem; border-radius: 20px; border: 1px solid rgba(128,128,128,0.3); background: transparent; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; color: inherit; }
-.cert-filter-btn:hover { border-color: #7c6ef0; }
-.cert-filter-btn.active { background: #7c6ef0; color: #fff; border-color: #7c6ef0; }
+.cert-filter-btn:hover { border-color: #000; }
+.cert-filter-btn.active { background: #000; color: #fff; border-color: #000; }
 .cert-filter-btn .count { font-weight: 700; margin-left: 0.3rem; }
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
 .cert-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 10px; background: rgba(128,128,128,0.08); transition: transform 0.2s, box-shadow 0.2s; }
@@ -158,7 +158,7 @@ permalink: /certifications/
     },
     {
       name: "Project Management & Enterprise Architecture",
-      color: "#7c6ef0",
+      color: "#000",
       certs: [
         "PRINCE2 Foundation",
         "PRINCE2 Registered Practitioner",
