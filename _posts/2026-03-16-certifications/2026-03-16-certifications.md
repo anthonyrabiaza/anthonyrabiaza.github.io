@@ -37,7 +37,7 @@ permalink: /certifications/
 <div class="cert-dashboard">
 
 <div class="cert-stats">
-  <div><div class="stat-value">67</div><div class="stat-label">Total certifications</div></div>
+  <div><div class="stat-value">69</div><div class="stat-label">Total certifications</div></div>
   <div><div class="stat-value">9</div><div class="stat-label">Domains</div></div>
   <div><div class="stat-value">13</div><div class="stat-label">Largest domain</div></div>
   <div><div class="stat-value">20+</div><div class="stat-label">Years experience</div></div>
@@ -106,9 +106,11 @@ permalink: /certifications/
       name: "Automation & Low-Code",
       color: "#6fcf97",
       certs: [
-        "Workato Automation Pro I",
-        "Workato Automation Pro II",
-        "Workato Automation Pro III",
+        "Workato Automation Pro I (2020)",
+        "Workato Automation Pro II (2020)",
+        "Workato Automation Pro I (2024)",
+        "Workato Automation Pro II (2024)",
+        "Workato Automation Pro III (2024)",
         "Workato Orchestrate Essentials",
         "n8n Level 1",
         "n8n Level 2",
