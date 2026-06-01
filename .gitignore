@@ -4,6 +4,6 @@ _site
 .jekyll-metadata
 vendor
 *.sh
-Gemfile.lock
-Gemfile.lock.old
-Gemfile.lock.old2
+Gemfile.lock*
+/_drafts/
+*.md

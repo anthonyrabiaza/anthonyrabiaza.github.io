@@ -56,7 +56,7 @@ permalink: /certifications/
   var categories = [
     {
       name: "Integration & API Platforms",
-      color: "#f0a05e",
+      color: "#1e3a8a",
       certs: [
         "Dell Boomi Certified Professional Architect",
         "Dell Boomi Certified Professional Developer",
