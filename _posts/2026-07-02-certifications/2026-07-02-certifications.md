@@ -37,7 +37,7 @@ permalink: /certifications/
 <div class="cert-dashboard">
 
 <div class="cert-stats">
-  <div><div class="stat-value">69</div><div class="stat-label">Total certifications</div></div>
+  <div><div class="stat-value">70</div><div class="stat-label">Total certifications</div></div>
   <div><div class="stat-value">9</div><div class="stat-label">Domains</div></div>
   <div><div class="stat-value">13</div><div class="stat-label">Largest domain</div></div>
   <div><div class="stat-value">20+</div><div class="stat-label">Years experience</div></div>
@@ -122,7 +122,7 @@ permalink: /certifications/
     },
     {
       name: "Cybersecurity & Identity",
-      color: "#e07be0",
+      color: "#6b21a8",
       certs: [
         "ISC2 Certified Information Systems Security Professional (CISSP)",
         "CompTIA Security+ Certified CE",
@@ -145,6 +145,7 @@ permalink: /certifications/
         "Dataiku ML Practitioner",
         "Oracle Cloud Infrastructure AI Foundations Associate",
         "Oracle Cloud Infrastructure Generative AI Professional",
+        "Google Cloud Generative AI Leader"
       ]
     },
     {
