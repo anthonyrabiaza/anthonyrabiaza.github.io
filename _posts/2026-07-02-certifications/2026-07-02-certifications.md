@@ -23,7 +23,8 @@ permalink: /certifications/
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
 .cert-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 10px; background: rgba(128,128,128,0.08); transition: transform 0.2s, box-shadow 0.2s; }
 .cert-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-.cert-avatar { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; color: #fff; flex-shrink: 0; letter-spacing: 0.5px; }
+.cert-avatar { width: 72px; height: 72px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: #fff; flex-shrink: 0; letter-spacing: 0.5px; }
+.cert-badge { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; }
 .cert-info .cert-name { font-weight: 600; font-size: 0.9rem; line-height: 1.3; }
 .cert-info .cert-category { font-size: 0.78rem; opacity: 0.6; margin-top: 0.15rem; }
 .cert-card.hidden { display: none; }
@@ -65,7 +66,6 @@ permalink: /certifications/
         "Dell Boomi Professional API Design and Management",
         "Dell Boomi Professional Sales Accreditation",
         "Dell Boomi Pre-Sales Technical Certification",
-        "Boomi Associate Master Data Hub Certification",
         "MuleSoft Certified Architect - Solution Design Specialist",
         "MuleSoft Certified Developer - Integration Professional",
         "MuleSoft Certified Developer - Integration and API Associate",
@@ -128,10 +128,10 @@ permalink: /certifications/
         "CompTIA Security+ Certified CE",
         "EC-Council Certified Ethical Hacker (CEH) Practical",
         "Okta Certified Professional - Hands-On Configuration",
-        "CyberArk Certified Trustee",
         "Fortinet Network Security Expert (NSE 1)",
         "Fortinet Network Security Expert (NSE 2)",
-        "ICSI Certified Network Security Specialist"
+        "ICSI Certified Network Security Specialist",
+        "CyberArk Certified Trustee"
       ]
     },
     {
@@ -139,13 +139,14 @@ permalink: /certifications/
       color: "#56cccc",
       certs: [
         "Google Cloud Professional Data Engineer",
+        "Google Cloud Generative AI Leader",
         "Microsoft Certified - Power Platform Fundamentals",
         "Databricks Lakehouse Fundamentals Accreditation",
         "Dataiku Core Designer",
         "Dataiku ML Practitioner",
         "Oracle Cloud Infrastructure AI Foundations Associate",
         "Oracle Cloud Infrastructure Generative AI Professional",
-        "Google Cloud Generative AI Leader"
+        "Boomi Associate Master Data Hub Certification"
       ]
     },
     {
@@ -179,6 +180,91 @@ permalink: /certifications/
       ]
     }
   ];
+
+  // Badge image lookup: exact cert name -> filename in assets/certifications/badges/
+  // Certs without an entry fall back to a colored initials avatar.
+  var BADGE_BASE = "{{ '/assets/certifications/badges/' | relative_url }}";
+  var badges = {
+    // Integration & API Platforms
+    "Dell Boomi Certified Professional Developer": "dell-boomi-logo.png",
+    "Dell Boomi Certified Professional Architect": "dell-boomi-logo.png",
+    "Dell Boomi Certified Associate Developer": "dell-boomi-logo.png",
+    "Dell Boomi Certified Production Administrator": "dell-boomi-logo.png",
+    "Dell Boomi Professional API Design and Management": "dell-boomi-logo.png",
+    "Dell Boomi Professional Sales Accreditation": "dell-boomi-logo.png",
+    "Dell Boomi Pre-Sales Technical Certification": "dell-boomi-logo.png",
+    "Boomi Associate Master Data Hub Certification": "boomi-master-data-hub.png",
+    "MuleSoft Certified Architect - Solution Design Specialist": "mulesoft-architect-solution-design.png",
+    "MuleSoft Certified Developer - Integration Professional": "mulesoft-integration-professional.png",
+    "MuleSoft Certified Developer - Integration and API Associate": "mulesoft-integration-api-associate.png",
+    "MuleSoft Certified Developer - API Design Associate": "mulesoft-api-design-associate.png",
+    "Kong Gateway Foundations": "kong-gateway-foundations.png",
+    // Event-Driven & Messaging
+    "Confluent Fundamentals Accreditation - Apache Kafka": "confluent-kafka-fundamentals.png",
+    "Solace Certified Solutions Consultant": "solace-solutions-consultant.png",
+    "Solace Certified Agent Mesh Practitioner": "solace-agent-mesh-practitioner.png",
+    "Solace Certified Event-Driven Integration Architect - Boomi": "solace-edi-architect-boomi.png",
+    "Solace Certified Event-Driven Integration Architect - MuleSoft": "solace-edi-architect.png",
+    "Boomi Associate Event Streams Certification": "boomi-event-streams.png",
+    // Cloud Platforms
+    "AWS Certified Solutions Architect Professional": "aws-sa-professional.png",
+    "AWS Certified Solutions Architect Associate": "aws-sa-associate.png",
+    "Oracle Cloud Infrastructure 2021 Architect Professional": "oracle-certified-professional.png",
+    "Oracle Cloud Infrastructure Generative AI Professional": "oracle-certified-professional.png",
+    "Oracle Cloud Infrastructure 2019 Architect Associate": "oracle-certified-associate.png",
+    "Oracle Cloud Infrastructure AI Foundations Associate": "oracle-certified-associate.png",
+    "Microsoft Certified - Azure Fundamentals": "azure-fundamentals.png",
+    "Alibaba Cloud Certified Associate - Cloud Computing": "alibaba-aca-cloud-computing.png",
+    "Alibaba Cloud Certification - Elastic Compute Service": "alibaba-technical-certificate.png",
+    "Alibaba Cloud Certification - Alibaba Cloud Database": "alibaba-technical-certificate.png",
+    "Alibaba Cloud Certification - Cloud-Native Apps": "alibaba-technical-certificate.png",
+    "Alibaba Cloud Certification - Network and Security": "alibaba-technical-certificate.png",
+    "Alibaba Cloud Certification - ElasticSearch": "alibaba-technical-certificate.png",
+    // Automation & Low-Code
+    "Workato Automation Pro I (2020)": "workato-automation-pro-1.png",
+    "Workato Automation Pro II (2020)": "workato-automation-pro-2.png",
+    "Workato Automation Pro I (2024)": "workato-automation-pro-1.png",
+    "Workato Automation Pro II (2024)": "workato-automation-pro-2.png",
+    "Workato Automation Pro III (2024)": "workato-automation-pro-3.png",
+    "Workato Orchestrate Essentials": "workato-orchestrate-essentials.png",
+    "Dell Boomi/ManyWho Associate Flow Developer": "dell-boomi-logo.png",
+    "Dell Boomi/ManyWho Professional Flow Developer": "dell-boomi-logo.png",
+    "n8n Level 1": "n8n-badge-level1.png",
+    "n8n Level 2": "n8n-badge-level2.png",
+    "Automation Anywhere Certified Advanced RPA Professional": "automation-anywhere-advanced.png",
+    "Certified Mendix Rapid Developer": "mendix-rapid-developer.png",
+    // Cybersecurity & Identity
+    "ISC2 Certified Information Systems Security Professional (CISSP)": "cissp.png",
+    "CompTIA Security+ Certified CE": "comptia-security-plus.png",
+    "EC-Council Certified Ethical Hacker (CEH) Practical": "ceh-practical.png",
+    "Okta Certified Professional - Hands-On Configuration": "okta-professional.png",
+    "CyberArk Certified Trustee": "cyberark-trustee.png",
+    "Fortinet Network Security Expert (NSE 1)": "fortinet-nse-1.png",
+    "Fortinet Network Security Expert (NSE 2)": "fortinet-nse-2.png",
+    "ICSI Certified Network Security Specialist": "icsi-network-security.png",
+    // AI, Data & Machine Learning
+    "Google Cloud Professional Data Engineer": "google-cloud-data-engineer.png",
+    "Microsoft Certified - Power Platform Fundamentals": "power-platform-fundamentals.png",
+    "Databricks Lakehouse Fundamentals Accreditation": "databricks-lakehouse.svg",
+    "Dataiku Core Designer": "dataiku-core-designer.png",
+    "Dataiku ML Practitioner": "dataiku-ml-practitioner.png",
+    "Google Cloud Generative AI Leader": "google-cloud-genai-leader.png",
+    // Observability & Monitoring
+    "Splunk Core Certified User": "splunk-core-user.png",
+    "New Relic APM Fundamental Certification": "new-relic-foundation.png",
+    "New Relic Full Stack Observability Practitioner": "new-relic-full-stack.png",
+    "Sumo Logic Certified Fundamentals": "sumo-logic-fundamentals.png",
+    "Sumo Logic Certified Cloud Security Monitoring & Analytics": "sumo-logic-cloud-security.png",
+    // Project Management & Enterprise Architecture
+    "PRINCE2 Foundation": "prince2-foundation.png",
+    "PRINCE2 Registered Practitioner": "prince2-practitioner.png",
+    "TOGAF 9 Foundation": "togaf-9-foundation.png",
+    "TOGAF 9 Certified": "togaf-9-certified.png",
+    // Kubernetes, Network & Reliability
+    "CNCF Certified Kubernetes Application Developer (CKAD)": "ckad.png",
+    "Certified Calico Operator: L1-K8s Networking and Security": "calico-operator.png",
+    "Gremlin Certified Chaos Engineering Practitioner": "gremlin-chaos.png"
+  };
 
   // Sort categories by count descending
   categories.sort(function(a, b) { return b.certs.length - a.certs.length; });
@@ -216,11 +302,19 @@ permalink: /certifications/
     return (words[0][0] + words[1][0]).toUpperCase();
   }
 
+  function escAttr(s) { return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;'); }
+
   var gridHtml = '';
   categories.forEach(function(cat) {
     cat.certs.forEach(function(cert) {
-      gridHtml += '<div class="cert-card" data-category="' + cat.name + '">' +
-        '<div class="cert-avatar" style="background:' + cat.color + '">' + getInitials(cert) + '</div>' +
+      var visual;
+      if (badges[cert]) {
+        visual = '<img class="cert-badge" loading="lazy" src="' + BADGE_BASE + badges[cert] +
+          '" alt="' + escAttr(cert) + ' badge">';
+      } else {
+        visual = '<div class="cert-avatar" style="background:' + cat.color + '">' + getInitials(cert) + '</div>';
+      }
+      gridHtml += '<div class="cert-card" data-category="' + cat.name + '">' + visual +
         '<div class="cert-info"><div class="cert-name">' + cert + '</div>' +
         '<div class="cert-category">' + cat.name + '</div></div></div>';
     });
