@@ -1,0 +1,16 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper" style="text-align: center;">
+
+    <p class="site-description" style="max-width: 640px; margin: 0 auto 0.75rem; opacity: 0.8;">
+      {{ site.description | escape }}
+    </p>
+
+    <div class="social-links" style="display: flex; justify-content: center;">
+      {%- include social.html -%}
+    </div>
+
+  </div>
+
+</footer>
